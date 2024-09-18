@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الجدول الدراسي</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>الجدول الدراسي</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>اليوم</th>
+                    <th>8:00 - 9:00</th>
+                    <th>9:00 - 10:00</th>
+                    <th>10:00 - 11:00</th>
+                    <th>11:00 - 12:00</th>
+                    <th>12:00 - 1:00</th>
+                    <th>1:00 - 2:00</th>
+                </tr>
+            </thead>
+            <tbody id="schedule-body">
+                <tr>
+                    <td>الأحد</td>
+                    <td>رياضيات</td>
+                    <td>علوم</td>
+                    <td>فيزياء</td>
+                    <td>كيمياء</td>
+                    <td>تاريخ</td>
+                    <td>عربي</td>
+                </tr>
+                <!-- يمكنك إضافة المزيد من الصفوف هنا -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.querySelectorAll('td').forEach(cell => {
+            cell.addEventListener('click', function() {
+                let newText = prompt('أدخل المادة الجديدة:', this.textContent);
+                if (newText) {
+                    this.textContent = newText;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
