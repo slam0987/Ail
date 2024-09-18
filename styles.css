@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    margin: 0 auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid #333;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+td[contenteditable="true"] {
+    background-color: #e0f7fa;
+    cursor: text;
+}
+
+td[contenteditable="true"]:hover {
+    background-color: #b2ebf2;
+}
+
+#saveButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#saveButton:hover {
+    background-color: #45a049;
+}
+
+input, button {
+    margin: 10px 5px;
+}
