@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل الفيديوهات</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>رفع فيديوهات</h1>
+
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="videoInput" accept="video/*" multiple>
+            <input type="text" id="groupName" placeholder="أدخل اسم المجموعة">
+            <button type="submit">رفع الفيديوهات</button>
+        </form>
+
+        <h2>الفيديوهات المرفوعة</h2>
+        <div id="videoGallery">
+            <!-- سيتم عرض الفيديوهات هنا -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
